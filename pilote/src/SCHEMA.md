@@ -1,10 +1,18 @@
-# Format des fichiers de contenu
+# Format des fichiers de contenu (v2)
+
+Nouveaux champs v2 : `verified` (module), `sources` (module), `src` (section et question), `how` (question : « comment ça marche »), `img` (section ou question : photo).
+
+```js
+img: { src: 'assets/img/cockpit-c172.jpg', alt: 'Tableau de bord d’un Cessna 172', caption: 'Légende', credit: 'FAA', license: 'Domaine public', url: 'https://…' }
+src: { label: 'EASA, SERA.5001', url: 'https://…' }
+```
+
 
 Chaque fichier `data-<etape>.js` est du JavaScript pur (pas de module, pas d'import) :
 
 ```js
 window.PARCOURS = window.PARCOURS || {};
-window.PARCOURS.ppl = {
+window.PARCOURS.ppl = {   // les fichiers sont dans src/content/
   modules: [
     {
       id: 'ppl-1',                 // unique, préfixe = étape

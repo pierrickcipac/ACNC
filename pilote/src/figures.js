@@ -571,6 +571,7 @@
     return `<div class="otan">${w.map(x => `<div><b>${x[0]}</b><span>${x}</span></div>`).join('')}</div>`;
   };
 
+  window.FIGHELP = { svg, T, L, A, face, ticksDial, needle, arc, attitude, planeSide, planeTop };
   window.FIGURES = F;
   window.renderFig = key => (F[key] ? F[key]() : '');
 })();
